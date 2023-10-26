@@ -16,6 +16,11 @@
     margin-top: 7rem;
 }
 
+.starsContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
 .spaceship {
     height: 30rem;
     width: auto;

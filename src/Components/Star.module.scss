@@ -1,0 +1,20 @@
+@import '../variables';
+
+.star {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: white;
+    margin: 0 6px;
+    box-shadow: 0 0 10px 10px #ffffff44;
+    // animation: animate 7s linear infinite;
+}
+
+// @keyframes animate {
+//     from {
+//         transform: translateY(-25vh);
+//     }
+//     to {
+//         transform: translateY(calc(100vh - 5rem));
+//     }
+// }
