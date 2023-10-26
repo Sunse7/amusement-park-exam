@@ -1,0 +1,14 @@
+@import '../variables';
+
+.header {
+    height: 5rem;
+    background-color: $primaryBlue;
+    display: flex;
+    &__title {
+        display: flex;
+        margin: auto;
+        font-family: $primaryFont;
+        font-weight: lighter;
+        color: white;
+    }
+}

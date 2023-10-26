@@ -1,0 +1,11 @@
+@import '../variables';
+
+.confirmButton {
+    appearance: none;
+    border: none;
+    padding: 1rem 2rem;
+    font-family: $secondaryFont;
+    background-color: $confirmBlue;
+    color: white;
+    @include shadow;
+}

@@ -1,0 +1,23 @@
+@import '../variables';
+
+.card {
+    max-width: 100rem;
+    font-family: $secondaryFont;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 5rem;
+}
+
+.card img {
+    width: 20rem;
+    height: auto;
+    @include shadow;
+}
+
+.textBox {
+    max-width: 25rem;   
+}
+
+.textBox h3 {
+    margin-bottom: 2rem;
+}

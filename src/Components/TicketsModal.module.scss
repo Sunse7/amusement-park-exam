@@ -1,0 +1,22 @@
+@import '../variables';
+
+.modal {
+    background-color: $modalGrey;
+    font-family: $secondaryFont;
+    color: white;
+    width: 47rem;
+    height: 12rem;
+    display: flex;
+    flex-direction: column;
+    @include shadow;
+}
+
+.modal p {
+    text-align: center;
+    margin: 1.5rem 0;
+}
+
+.modal section {
+    display: flex;
+   justify-content: space-evenly;
+}

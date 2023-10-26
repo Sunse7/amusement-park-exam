@@ -1,0 +1,12 @@
+@import '../variables';
+
+.wrapper {
+    background-color: $backgroundColor;
+    color: black;
+    padding: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 7rem;
+}
