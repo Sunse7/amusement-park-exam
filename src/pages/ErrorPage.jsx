@@ -6,11 +6,11 @@ import style from "./ErrorPage.module.scss";
 const MotionStar = motion(Star);
 
 function ErrorPage() {
-  const durations = Array.from({ length: 70 }, () =>
-    Math.floor(Math.random() * (20 - 10 + 1) + 10)
+  const durations = Array.from({ length: 100 }, () =>
+    Math.floor(Math.random() * (15 - 5 + 1) + 5)
   );
 
-  //TODO fix that all fall att once in a line
+  //TODO fix so that all dont fall att once in a line
 
   return (
     <>
@@ -23,8 +23,8 @@ function ErrorPage() {
           {durations.map((duration, i) => (
             <MotionStar
               key={i}
-              initial={{ y: -250, opacity: 0 }}
-              animate={{opacity: 1, y: 1000 }}
+              initial={{ y: -250 }}
+              animate={{ y: 630 }}
               transition={{ duration: duration, repeat: Infinity }}
             />
           ))}
