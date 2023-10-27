@@ -1,8 +1,9 @@
+import { forwardRef } from "react";
 import style from "./AttractionCard.module.scss";
 
-function AttractionCard({ title, infoText, src, alt, isReversed }) {
+const AttractionCard = forwardRef(({ title, infoText, src, alt, isReversed }, ref)  => {
   return (
-    <section className={style.card}>
+    <section ref={ref} className={style.card}>
       {isReversed ? (
         <>
           <img src={src} alt={alt} />
@@ -22,6 +23,6 @@ function AttractionCard({ title, infoText, src, alt, isReversed }) {
       )}
     </section>
   );
-}
+});
 
 export default AttractionCard;

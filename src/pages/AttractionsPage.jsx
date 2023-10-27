@@ -1,6 +1,9 @@
+import { motion } from "framer-motion";
 import AttractionCard from "../Components/AttractionCard";
 import Header from "../Components/Header";
 import style from "./AttractionsPage.module.scss";
+
+const MotionAttractionCard = motion(AttractionCard);
 
 function AttractionsPage() {
   const cosmicVortexInfo =
@@ -14,20 +17,23 @@ function AttractionsPage() {
     <>
       <Header />
       <main className={style.wrapper}>
-        <AttractionCard
+        <MotionAttractionCard
+          whileHover={{ scale: 1.1, backgroundColor: '#5B85AA', transition: { ease: 'easeInOut', duration: .5 } }}
           title="Cosmic Vortex"
           infoText={cosmicVortexInfo}
           src="./images/BlackHole.png"
           alt="Spaceship going into a black hole"
         />
-        <AttractionCard
+        <MotionAttractionCard
+          whileHover={{ scale: 1.1, backgroundColor: '#5B85AA', transition: { ease: 'easeInOut', duration: .5 } }}
           title="Galaxy Rush"
           infoText={galaxyRushInfo}
           src="./images/HyperSpace.png"
           alt="A spaceship going through hyperspace"
           isReversed={true}
         />
-        <AttractionCard
+        <MotionAttractionCard
+          whileHover={{ scale: 1.1, backgroundColor: '#5B85AA', transition: { ease: 'easeInOut', duration: .5 } }}
           title="Lunar Leap"
           infoText={lunarLeapInfo}
           src="./images/MoonJump.png"
