@@ -10,7 +10,9 @@ function ErrorPage() {
     Math.floor(Math.random() * (15 - 5 + 1) + 5)
   );
 
-  //TODO fix so that all dont fall att once in a line
+  const starPositions = Array.from({ length: 100 }, () =>
+  Math.floor(Math.random() * (-250 - (-400) + 1)) - 400
+);
 
   return (
     <>
@@ -23,9 +25,9 @@ function ErrorPage() {
           {durations.map((duration, i) => (
             <MotionStar
               key={i}
-              initial={{ y: -250 }}
+              initial={{ y: starPositions[i] }}
               animate={{ y: 630 }}
-              transition={{ duration: duration, repeat: Infinity }}
+              transition={{ duration: duration, ease: 'linear', repeat: Infinity }}
             />
           ))}
         </section>

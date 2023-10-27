@@ -4,6 +4,7 @@
     height: 5rem;
     background-color: $primaryBlue;
     display: flex;
+    z-index: 20;
     &__title {
         display: flex;
         margin: auto;

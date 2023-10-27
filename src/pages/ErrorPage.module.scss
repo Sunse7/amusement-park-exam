@@ -8,6 +8,7 @@
     min-height: calc(100vh - 5rem);
     justify-content: space-between;
     overflow: hidden;
+    z-index: 1;
 }
 
 .header {
@@ -20,9 +21,11 @@
 .starsContainer {
     display: flex;
     justify-content: space-between;
+    z-index: 5;
 }
 
 .spaceship {
     height: 30rem;
     width: auto;
+    z-index: 15;
 }
