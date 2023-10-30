@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import AttractionCard from "../Components/AttractionCard";
 import Header from "../Components/Header";
 import style from "./AttractionsPage.module.scss";
@@ -17,28 +17,45 @@ function AttractionsPage() {
     <>
       <Header />
       <main className={style.wrapper}>
-        <MotionAttractionCard
-          whileHover={{ scale: 1.1, backgroundColor: '#5B85AA', transition: { ease: 'easeInOut', duration: .5 } }}
-          title="Cosmic Vortex"
-          infoText={cosmicVortexInfo}
-          src="./images/BlackHole.png"
-          alt="Spaceship going into a black hole"
-        />
-        <MotionAttractionCard
-          whileHover={{ scale: 1.1, backgroundColor: '#5B85AA', transition: { ease: 'easeInOut', duration: .5 } }}
-          title="Galaxy Rush"
-          infoText={galaxyRushInfo}
-          src="./images/HyperSpace.png"
-          alt="A spaceship going through hyperspace"
-          isReversed={true}
-        />
-        <MotionAttractionCard
-          whileHover={{ scale: 1.1, backgroundColor: '#5B85AA', transition: { ease: 'easeInOut', duration: .5 } }}
-          title="Lunar Leap"
-          infoText={lunarLeapInfo}
-          src="./images/MoonJump.png"
-          alt="Person in space suit jumping on a planet"
-        />
+        <AnimatePresence>
+          <MotionAttractionCard
+            whileHover={{
+              scale: 1.1,
+              backgroundColor: "#5B85AA",
+              transition: { ease: "easeInOut", duration: 0.5 },
+            }}
+            transition={{ ease: 'easeOut', duration: .5 }}
+            title="Cosmic Vortex"
+            infoText={cosmicVortexInfo}
+            src="./images/BlackHole.png"
+            alt="Spaceship going into a black hole"
+          />
+          <MotionAttractionCard
+            whileHover={{
+              scale: 1.1,
+              backgroundColor: "#5B85AA",
+              transition: { ease: "easeInOut", duration: 0.5 },
+            }}
+            transition={{ ease: 'easeOut', duration: .5 }}
+            title="Galaxy Rush"
+            infoText={galaxyRushInfo}
+            src="./images/HyperSpace.png"
+            alt="A spaceship going through hyperspace"
+            isReversed={true}
+          />
+          <MotionAttractionCard
+            whileHover={{
+              scale: 1.1,
+              backgroundColor: "#5B85AA",
+              transition: { ease: "easeInOut", duration: 0.5 },
+            }}
+            transition={{ ease: 'easeOut', duration: .5 }}
+            title="Lunar Leap"
+            infoText={lunarLeapInfo}
+            src="./images/MoonJump.png"
+            alt="Person in space suit jumping on a moon"
+          />
+        </AnimatePresence>
       </main>
     </>
   );
