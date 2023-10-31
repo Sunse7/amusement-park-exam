@@ -1,5 +1,6 @@
 @import '../variables';
 
 .date {
+    border: none;
     @include shadow;
 }
