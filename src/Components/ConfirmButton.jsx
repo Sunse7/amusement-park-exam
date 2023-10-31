@@ -1,9 +1,9 @@
 import { forwardRef } from 'react';
 import style from './ConfirmButton.module.scss';
 
-const ConfirmButton = forwardRef((props, ref) => {
+const ConfirmButton = forwardRef(({onClick}, ref) => {
     return ( 
-        <button ref={ref} className={style.confirmButton}>Buy tickets</button>
+        <button ref={ref} onClick={onClick} className={style.confirmButton}>Buy tickets</button>
      );
 });
 
