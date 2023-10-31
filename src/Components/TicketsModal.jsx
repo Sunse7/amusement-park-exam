@@ -1,7 +1,7 @@
 import MyCalendar from "./MyCalendar";
 import ConfirmButton from "./ConfirmButton";
 import style from "./TicketsModal.module.scss";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import TicketAmount from "./TicketAmount";
 import { useState } from "react";
 import ConfirmModal from "./ConfirmModal";
@@ -32,7 +32,15 @@ function TicketsModal() {
           whileTap={{ scale: 0.9 }}
           whileHover={{ color: darkGrey }}
         />
-        {isVisible && <ConfirmModal numTickets={amount} />}
+        <AnimatePresence initial={false} mode="wait" onExitComplete={() => null}>
+          {isVisible && (
+            <ConfirmModal
+              numTickets={amount}
+              isVisible={isVisible}
+              handleClose={() => setIsVisible(false)}
+            />
+          )}
+        </AnimatePresence>
       </section>
     </section>
   );
