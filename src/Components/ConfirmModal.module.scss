@@ -1,8 +1,8 @@
 @import '../variables';
 
 .wrapper {
-    width: clamp(50%, 700px, 90%);
-    height: min(50%, 300px);
+    width: clamp(50%, 500px, 60%);
+    height: min(50%, 400px);
     background-color: $modalGrey;
     display: flex;
     flex-direction: column;
@@ -17,5 +17,5 @@
 }
 
 .wrapper p {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
