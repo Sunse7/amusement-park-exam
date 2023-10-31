@@ -12,7 +12,7 @@ function TicketsModal() {
     <section className={style.modal}>
       <p>Buy your tickets here</p>
       <section>
-        
+        <MyCalendar />
         <MotionConfirmButton whileTap={{ scale: 0.9 }} whileHover={{ color: darkGrey }} />
       </section>
     </section>

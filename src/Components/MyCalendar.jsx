@@ -1,4 +1,4 @@
-import style from './Calendar.module.scss';
+import style from './MyCalendar.module.scss';
 
 function Calendar() {
     return ( 
