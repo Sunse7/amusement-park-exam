@@ -1,9 +1,9 @@
 import style from './MyCalendar.module.scss';
 
-function Calendar() {
+function Calendar({onDateChange}) {
     return ( 
         <>
-            <input type="date" className={style.date}></input>
+            <input type="date" className={style.date} onChange={(e) => onDateChange(e.target.value)}></input>
         </>
      );
 }

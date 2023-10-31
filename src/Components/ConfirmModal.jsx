@@ -28,7 +28,7 @@ const flip = {
     },
   };
 
-function ConfirmModal({ numTickets, handleClose }) {
+function ConfirmModal({ numTickets, handleClose, chosenDate }) {
   return (
     <Backdrop onClick={handleClose}>
       <motion.section
@@ -43,6 +43,7 @@ function ConfirmModal({ numTickets, handleClose }) {
           <CrossIcon />
         </button>
         <p>Number of tickets: {numTickets}</p>
+        <p>Date: {chosenDate}</p>
         <ConfirmButton />
       </motion.section>
     </Backdrop>
