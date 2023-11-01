@@ -13,7 +13,7 @@ const flip = {
     },
   },
   visible: {
-    transform: " scale(1) rotateX(0deg)",
+    transform: "scale(1) rotateX(0deg)",
     opacity: 1,
     transition: {
       duration: 0.7,
