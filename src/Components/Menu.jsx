@@ -3,8 +3,6 @@ import style from "./Menu.module.scss";
 import CrossIcon from "./CrossIcon";
 import { AnimatePresence, motion } from "framer-motion";
 
-//TODO close on scroll
-
 function Menu({ onClick, isOpen }) {
   const menuVars = {
     init: { scaleY: 0 },
@@ -29,7 +27,7 @@ function Menu({ onClick, isOpen }) {
       <button onClick={onClick}>
         {isOpen ? <CrossIcon /> : <HamburgerIcon />}
       </button>
-      <AnimatePresence>
+      <AnimatePresence initial={false} mode="wait" onExitComplete={() => null}>
         {isOpen && (
           <motion.section
             variants={menuVars}
