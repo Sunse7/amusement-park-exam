@@ -1,10 +1,13 @@
-import { forwardRef } from 'react';
 import style from './ConfirmButton.module.scss';
+import { motion } from 'framer-motion';
 
-const ConfirmButton = forwardRef(({onClick}, ref) => {
+function ConfirmButton({onClick}) {
+    const darkGrey = "#1f1e1e";
+    
     return ( 
-        <button ref={ref} onClick={onClick} className={style.confirmButton}>Buy tickets</button>
+        <motion.button whileTap={{ scale: 0.9 }}
+        whileHover={{ color: darkGrey }} onClick={onClick} className={style.confirmButton}>Buy tickets</motion.button>
      );
-});
+};
 
 export default ConfirmButton;
