@@ -5,28 +5,28 @@ import Backdrop from "./Backdrop";
 import CrossIcon from "./CrossIcon";
 
 const flip = {
-    hidden: {
-      transform: "scale(0) rotateX(-360deg)",
-      opacity: 0,
-      transition: {
-        delay: 0.3,
-      },
+  hidden: {
+    transform: "scale(0) rotateX(-360deg)",
+    opacity: 0,
+    transition: {
+      delay: 0.3,
     },
-    visible: {
-      transform: " scale(1) rotateX(0deg)",
-      opacity: 1,
-      transition: {
-        duration: 0.7,
-      },
+  },
+  visible: {
+    transform: " scale(1) rotateX(0deg)",
+    opacity: 1,
+    transition: {
+      duration: 0.7,
     },
-    exit: {
-      transform: "scale(0) rotateX(360deg)",
-      opacity: 0,
-      transition: {
-        duration: 0.7,
-      },
+  },
+  exit: {
+    transform: "scale(0) rotateX(360deg)",
+    opacity: 0,
+    transition: {
+      duration: 0.7,
     },
-  };
+  },
+};
 
 function ConfirmModal({ numTickets, handleClose, chosenDate }) {
   return (
@@ -39,11 +39,23 @@ function ConfirmModal({ numTickets, handleClose, chosenDate }) {
         animate="visible"
         exit="exit"
       >
-        <button className={style.closeButton} onClick={handleClose}>
+        <motion.button
+          whileTap={{ scale: 0.9 }}
+          className={style.closeButton}
+          onClick={handleClose}
+        >
           <CrossIcon />
-        </button>
-        <p>Number of tickets: {numTickets}</p>
-        <p>Date: {chosenDate}</p>
+        </motion.button>
+        <section className={style.textBox}>
+          <section className={style.ticketBox}>
+            <p>Number of tickets: </p>
+            <p>{numTickets}</p>
+          </section>
+          <section className={style.dateBox}>
+            <p>Date: </p>
+            <p>{chosenDate}</p>
+          </section>
+        </section>
         <ConfirmButton />
       </motion.section>
     </Backdrop>

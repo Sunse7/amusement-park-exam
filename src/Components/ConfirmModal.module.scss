@@ -16,6 +16,13 @@
     border: none;
 }
 
-.wrapper p {
+.textBox {
+    display: flex;
+    flex-direction: column;
     font-size: 1.2rem;
+}
+
+.ticketBox, .dateBox {
+    display: flex;
+    gap: 1.5rem;
 }
